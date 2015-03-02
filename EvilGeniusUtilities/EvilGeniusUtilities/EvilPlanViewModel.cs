@@ -13,7 +13,13 @@ namespace EvilGeniusUtilities
 
         public string EvilPlanName {
             get { return evilPlanName;  }
-            set { evilPlanName = value; }
+            set {
+                if (evilPlanName != value)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("EvilPlanName"));
+                    evilPlanName = value;
+                }
+            }
         }
         private string evilPlanName;
     }

@@ -125,7 +125,15 @@ the minion. Note that if fixes all the JSON areas.
 M3.3: Add a constructor check on the evil genius.
 Make sure the evil genius has a name. Use nameof
 
-.. Next, make a viewmodel.
+M3.4 Create an Evil Plan view model. INotifyPRopertyChanged
+isn't being raised yet.
+
+M3.5 Raise in the simplest classic way
+
+M3.6: use nameof
+
+M3.7 A little review of ?.
+
 
 .. Do some string formatting!
 
