@@ -17,7 +17,7 @@ namespace EvilGeniusUtilities
                 if (evilPlanName != value)
                 {
                     evilPlanName = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("EvilPlanName"));
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(EvilPlanName));
                 }
             }
         }
