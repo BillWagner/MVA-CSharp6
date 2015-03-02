@@ -36,15 +36,19 @@ namespace EvilGeniusUtilities
             if (evilness != null)
                 foreach(var evil in evilness)
                 {
-                    result.Add(new JObject
+                    var json = new JObject
                     {
                         ["Name"] = evil.Name,
-                        ["CatchPhrase"] = evil.CatchPhrase,
-                        ["Minion"] = new JObject
+                        ["CatchPhrase"] = evil.CatchPhrase ?? string.Empty,
+                    };
+                    if (evil.Minion != null)
+                    {
+                        json["Minion"] = new JObject
                         {
-                            ["Name"] = evil?.Minion?.Name
-                        }
-                    });
+                            ["Name"] = evil?.Minion?.Name ?? string.Empty
+                        };
+                    }
+                    result.Add(json);
                 }
             return result;
         }
