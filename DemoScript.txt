@@ -125,6 +125,9 @@ the minion. Note that if fixes all the JSON areas.
 M3.3: Add a constructor check on the evil genius.
 Make sure the evil genius has a name. Use nameof
 
+.. Next, make a viewmodel.
+
+.. Do some string formatting!
 
 
 
