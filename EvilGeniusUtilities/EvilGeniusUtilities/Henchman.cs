@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace EvilGeniusUtilities
 {
-    public class EvilGenius
+    public class Henchman
     {
         public string Name { get; set; }
-
-        public Henchman Minion{ get; set; }
-
-        public string CatchPhrase { get; set; }
-
-        public override string ToString() => Name;
     }
 }

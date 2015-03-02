@@ -18,6 +18,30 @@ Main() and writing a console message.
 Discuss benefits.
 
 4. In Main, replace Console.WriteLine with WriteLine
-and a static using.
+and a static using. Point out that you don't get a 
+codefix for a static using. (Is that coming? Community
+contribution?)  Add the static using statement. Point
+out that intellisense knows to filter namespaces vs.
+classes depending on the presence of the 'static' keyword
+in the using statement.
+
+Let's take a few moments to talk about both of these features.
+Expression Bodied Members:
+. Must be single expressions (not multi-line anonymous functions)
+. Could be LINQ queries, which might be complex
+. great for read only properties (which we will cover later.)
+
+Static Usings:
+. De clutter source. (We know WriteLine is likely in theConsole
+class)
+. Consider Math class, even System.String.
+. Later, we'll discuss how static usings work with Extension 
+methods.
+
+Now, let's move on to the null coalescing operator
+
+5. Change the henchman to a class (we will add more properties
+and features later.) 
+
 
 
