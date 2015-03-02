@@ -9,7 +9,7 @@ namespace EvilGeniusUtilities
 {
     public class EvilGenius
     {
-        public string Name { get; private set; }
+        public string Name { get; }
 
         public EvilGenius(string name)
         {
