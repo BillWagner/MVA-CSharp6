@@ -10,7 +10,7 @@ namespace EvilGeniusUtilities
     {
         public string Name { get; set; }
 
-        public Henchman Minion{ get; set; }
+        public Henchman Minion { get; set;}
 
         public string CatchPhrase { get; set; }
 
@@ -18,9 +18,7 @@ namespace EvilGeniusUtilities
 
         public void RetireHenchman()
         {
-            var disposableMinion = Minion as IDisposable;
-            if (disposableMinion != null)
-                disposableMinion.Dispose();
+            (Minion as IDisposable)?.Dispose();
             Minion = null;
         }
     }
