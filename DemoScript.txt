@@ -135,7 +135,8 @@ handler is connected.
 
 M3.7: classic thread safe handler.
 
-M3.8: Elvis.
+M3.8: Elvis. Make sure to point out that it is
+threadsafe.
 
 M 3.9: use nameof
 

@@ -24,7 +24,7 @@ namespace EvilGeniusUtilities
 
         public string CatchPhrase { get; set; }
 
-        public override string ToString() => Name + ", " + Assistant?.Name;
+        public override string ToString() => $"{Name}, {Assistant?.Name}";
 
         public void ReplaceHenchman(Henchman newHenchman)
         {
