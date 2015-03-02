@@ -17,11 +17,12 @@ namespace EvilGeniusUtilities
             DrEvil.ReplaceHenchman(new Henchman { Name = "Scott Evil" });
             WriteLine(DrEvil);
 
-            DrEvil.ReplaceHenchman(default(Henchman));
-            WriteLine(DrEvil);
-
             var TheMaster = new EvilGenius("The Master");
-            WriteLine(EvilGenius.ToJson(new[] { DrEvil, TheMaster }));
+            var tokens = EvilGenius.ToJson(new[] { DrEvil, TheMaster });
+
+            var evil = EvilGenius.FromJson(tokens);
+            foreach (var e in evil)
+                WriteLine(e);
         }
     }
 }

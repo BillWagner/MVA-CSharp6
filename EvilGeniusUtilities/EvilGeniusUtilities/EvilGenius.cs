@@ -52,5 +52,28 @@ namespace EvilGeniusUtilities
                 }
             return result;
         }
+
+        public static IEnumerable<EvilGenius> FromJson(JArray array)
+        {
+            foreach (var json in array)
+            {
+                if (json != null)
+                {
+                    var rVal = new EvilGenius((string)json["Name"])
+                    {
+                        CatchPhrase = (string)json["CatchPhrase"]
+                    };
+                    var minion = (JToken)json["Minion"];
+                    if (minion != null)
+                    {
+                        rVal.ReplaceHenchman(new Henchman
+                        {
+                            Name = (string)minion["Name"]
+                        });
+                    }
+                    yield return rVal;
+                }
+            }
+        }
     }
 }

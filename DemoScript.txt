@@ -92,6 +92,17 @@ associative containers.
 
 .. Talk about the new NuGet interface. 
 
+M2.5: CHange how the minion is created. Point out that
+no features are gone in the language. We can freely mix 
+the new dictionary initializers with the old syntx. 
+This new version matches our business rules a little 
+better. Not every evil genius has a minion.
+
+M2.6 Time to Create FromJson. 
+This is a good time to use GitHub to grab this version.
+Less C# 6, just code.
+
+
 
 
 
