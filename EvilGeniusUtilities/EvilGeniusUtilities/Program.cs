@@ -16,6 +16,9 @@ namespace EvilGeniusUtilities
                 Name = "Dr. Evil"
             };
             WriteLine(DrEvil);
+
+            DrEvil.Minion = new Henchman { Name = "Scott Evil" };
+            WriteLine(DrEvil);
         }
     }
 }

@@ -14,6 +14,6 @@ namespace EvilGeniusUtilities
 
         public string CatchPhrase { get; set; }
 
-        public override string ToString() => Name;
+        public override string ToString() => Name + ", " + Minion?.Name;
     }
 }
