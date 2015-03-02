@@ -116,10 +116,14 @@ where we can make our library better by using nameof.
 Why: nameof uses the symbol name, so refactoring tools
 make this work better.
 
-M3.1: put nameof on the JSON keys.
+M3.1: put nameof on the JSON keys. (not labelled on the 
+commit message. )
 
 M3.2: Use an F2 refactoring to change the name of
 the minion. Note that if fixes all the JSON areas.
+
+M3.3: Add a constructor check on the evil genius.
+Make sure the evil genius has a name. Use nameof
 
 
 

@@ -14,6 +14,8 @@ namespace EvilGeniusUtilities
 
         public EvilGenius(string name)
         {
+            if (name == null)
+                throw new ArgumentNullException(nameof(name), "The Evil Genius must have a name");
             Name = name;
         }
 
