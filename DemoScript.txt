@@ -130,9 +130,14 @@ isn't being raised yet.
 
 M3.5 Raise in the simplest classic way
 
-M3.6: use nameof
+M3.6: Naive implementation that doesn't check if a 
+handler is connected.
 
-M3.7 A little review of ?.
+M3.7: classic thread safe handler.
+
+M3.8: Elvis.
+
+M 3.9: use nameof
 
 
 .. Do some string formatting!
