@@ -16,3 +16,8 @@ Main() and writing a console message.
 
 3. Translate ToString() to an expression bodied member.
 Discuss benefits.
+
+4. In Main, replace Console.WriteLine with WriteLine
+and a static using.
+
+
