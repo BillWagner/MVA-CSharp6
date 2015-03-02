@@ -10,6 +10,11 @@ namespace EvilGeniusUtilities
     {
         static void Main(string[] args)
         {
+            var DrEvil = new EvilGenius
+            {
+                Name = "Dr. Evil"
+            };
+            Console.WriteLine(DrEvil);
         }
     }
 }

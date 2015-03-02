@@ -1,0 +1,13 @@
+Module 1:
+===========================================================
+This module shows some of the new features. I picked these
+features first because they are easy to explain for 
+simple use cases, and they should be good 'hooks' for the
+audience.
+
+Step one: Create the project, add an EvilGenius Class.
+The first version of the EvilGenius class just has the 
+three properties.
+
+Step 2: Let's add an override of ToString() so the Evil
+Genius can announce himself to the world.
