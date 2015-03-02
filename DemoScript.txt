@@ -9,5 +9,10 @@ Step one: Create the project, add an EvilGenius Class.
 The first version of the EvilGenius class just has the 
 three properties.
 
-Step 2: Let's add an override of ToString() so the Evil
-Genius can announce himself to the world.
+2: Let's add an override of ToString() so the Evil
+Genius can announce himself to the world. Do this using
+the classic syntax. Include creating an EvilGenius in
+Main() and writing a console message.
+
+3. Translate ToString() to an expression bodied member.
+Discuss benefits.
