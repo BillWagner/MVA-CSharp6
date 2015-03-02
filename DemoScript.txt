@@ -102,8 +102,16 @@ M2.6 Time to Create FromJson.
 This is a good time to use GitHub to grab this version.
 Less C# 6, just code.
 
+Key messages on this section: These features make it 
+easier to create types that are immutable, or types 
+that will be sent along the wire between different 
+machines. 
 
+===========================================================
+On to Module 3: 
 
+Let's start with nameof. There are a number of places
+where we can make our library better by 
 
 
 
