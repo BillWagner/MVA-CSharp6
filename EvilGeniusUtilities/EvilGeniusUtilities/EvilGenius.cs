@@ -15,5 +15,13 @@ namespace EvilGeniusUtilities
         public string CatchPhrase { get; set; }
 
         public override string ToString() => Name + ", " + Minion?.Name;
+
+        public void RetireHenchman()
+        {
+            var disposableMinion = Minion as IDisposable;
+            if (disposableMinion != null)
+                disposableMinion.Dispose();
+            Minion = null;
+        }
     }
 }

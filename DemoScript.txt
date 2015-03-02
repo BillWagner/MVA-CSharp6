@@ -43,5 +43,22 @@ Now, let's move on to the null coalescing operator
 5. Change the henchman to a class (we will add more properties
 and features later.) 
 
+6. Change ToString so that it also prints out the name of the
+henchman, if present. I really don't want to do all that 
+typing to make it a classic style method, add if statements
+and else clauses, depending on the presence of the henchman. 
+
+After this change, let's finish by showing how you can handle
+ownership issues where an element may or may not implement
+IDisposable.
+
+7,8. In module 1, let's make it a very simple method added to 
+EvilGenius to 'replace' a henchman. Add the public RetireHenchman
+method. Discuss alternatives, and show how the null coalescing
+operator makes it easy to do the right thing, and safely 
+handle possible disposable henchman.
+
+
+
 
 
