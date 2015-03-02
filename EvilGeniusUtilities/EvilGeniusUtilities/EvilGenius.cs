@@ -17,12 +17,12 @@ namespace EvilGeniusUtilities
             Name = name;
         }
 
-        public Henchman Minion => minion;
+        public Henchman Assistant => minion;
         private Henchman minion;
 
         public string CatchPhrase { get; set; }
 
-        public override string ToString() => Name + ", " + Minion?.Name;
+        public override string ToString() => Name + ", " + Assistant?.Name;
 
         public void ReplaceHenchman(Henchman newHenchman)
         {
@@ -41,11 +41,11 @@ namespace EvilGeniusUtilities
                         [nameof(EvilGenius.Name)] = evil.Name,
                         [nameof(EvilGenius.CatchPhrase)] = evil.CatchPhrase ?? string.Empty,
                     };
-                    if (evil.Minion != null)
+                    if (evil.Assistant != null)
                     {
-                        json[nameof(EvilGenius.Minion)] = new JObject
+                        json[nameof(EvilGenius.Assistant)] = new JObject
                         {
-                            [nameof(Henchman.Name)] = evil?.Minion?.Name ?? string.Empty
+                            [nameof(Henchman.Name)] = evil?.Assistant?.Name ?? string.Empty
                         };
                     }
                     result.Add(json);
@@ -63,7 +63,7 @@ namespace EvilGeniusUtilities
                     {
                         CatchPhrase = (string)json[nameof(EvilGenius.CatchPhrase)]
                     };
-                    var minion = (JToken)json[nameof(EvilGenius.Minion)];
+                    var minion = (JToken)json[nameof(EvilGenius.Assistant)];
                     if (minion != null)
                     {
                         rVal.ReplaceHenchman(new Henchman

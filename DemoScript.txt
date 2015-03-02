@@ -111,7 +111,16 @@ machines.
 On to Module 3: 
 
 Let's start with nameof. There are a number of places
-where we can make our library better by 
+where we can make our library better by using nameof.
+
+Why: nameof uses the symbol name, so refactoring tools
+make this work better.
+
+M3.1: put nameof on the JSON keys.
+
+M3.2: Use an F2 refactoring to change the name of
+the minion. Note that if fixes all the JSON areas.
+
 
 
 
