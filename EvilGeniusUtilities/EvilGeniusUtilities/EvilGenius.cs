@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace EvilGeniusUtilities
@@ -10,16 +11,17 @@ namespace EvilGeniusUtilities
     {
         public string Name { get; set; }
 
-        public Henchman Minion { get; set;}
+        public Henchman Minion => minion;
+        private Henchman minion;
 
         public string CatchPhrase { get; set; }
 
         public override string ToString() => Name + ", " + Minion?.Name;
 
-        public void RetireHenchman()
+        public void ReplaceHenchman(Henchman newHenchman)
         {
-            (Minion as IDisposable)?.Dispose();
-            Minion = null;
+            var oldMinion = Interlocked.Exchange(ref minion, newHenchman);
+            (oldMinion as IDisposable)?.Dispose();
         }
     }
 }

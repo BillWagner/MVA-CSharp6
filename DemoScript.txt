@@ -58,6 +58,19 @@ method. Discuss alternatives, and show how the null coalescing
 operator makes it easy to do the right thing, and safely 
 handle possible disposable henchman.
 
+===========================================================
+Module 2:  Read Only Properties and Dictionary Initializers
+
+Now, we make a couple changes to the EvilGenius class to 
+make use of Read Only Property enhancement.
+
+M2.1: Change Minion to a readonly only property with a 
+backing field. Rename RetireMinion as ReplaceMinion, and
+have it take a new minion. This means we can use 
+Interlocked.Exchange to be completely thread safe when
+the minion is replaced.
+
+
 
 
 
