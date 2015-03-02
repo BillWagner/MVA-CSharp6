@@ -11,10 +11,7 @@ namespace EvilGeniusUtilities
     {
         static void Main(string[] args)
         {
-            var DrEvil = new EvilGenius
-            {
-                Name = "Dr. Evil"
-            };
+            var DrEvil = new EvilGenius("Dr. Evil");
             WriteLine(DrEvil);
 
             DrEvil.ReplaceHenchman(new Henchman { Name = "Scott Evil" });

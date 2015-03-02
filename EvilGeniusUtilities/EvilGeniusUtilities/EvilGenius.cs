@@ -9,7 +9,12 @@ namespace EvilGeniusUtilities
 {
     public class EvilGenius
     {
-        public string Name { get; set; }
+        public string Name { get; private set; }
+
+        public EvilGenius(string name)
+        {
+            Name = name;
+        }
 
         public Henchman Minion => minion;
         private Henchman minion;

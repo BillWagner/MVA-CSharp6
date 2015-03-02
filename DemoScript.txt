@@ -70,6 +70,13 @@ have it take a new minion. This means we can use
 Interlocked.Exchange to be completely thread safe when
 the minion is replaced.
 
+. Talk about these changes for a bit.
+
+M2.2: Evil Geniuses never change their name. Make that 
+a readonly property that is set during construction. Use
+old syntax first.
+
+
 
 
 
