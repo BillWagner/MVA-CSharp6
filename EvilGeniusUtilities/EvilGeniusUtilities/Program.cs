@@ -19,6 +19,9 @@ namespace EvilGeniusUtilities
 
             DrEvil.ReplaceHenchman(default(Henchman));
             WriteLine(DrEvil);
+
+            var TheMaster = new EvilGenius("The Master");
+            WriteLine(EvilGenius.ToJson(new[] { DrEvil, TheMaster }));
         }
     }
 }

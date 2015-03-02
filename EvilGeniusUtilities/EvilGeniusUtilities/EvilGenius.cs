@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,25 @@ namespace EvilGeniusUtilities
         {
             var oldMinion = Interlocked.Exchange(ref minion, newHenchman);
             (oldMinion as IDisposable)?.Dispose();
+        }
+
+        public static JArray ToJson(IEnumerable<EvilGenius> evilness)
+        {
+            var result = new JArray();
+            if (evilness != null)
+                foreach(var evil in evilness)
+                {
+                    result.Add(new JObject
+                    {
+                        ["Name"] = evil.Name,
+                        ["CatchPhrase"] = evil.CatchPhrase,
+                        ["Minion"] = new JObject
+                        {
+                            ["Name"] = evil?.Minion?.Name
+                        }
+                    });
+                }
+            return result;
         }
     }
 }

@@ -76,6 +76,23 @@ M2.2: Evil Geniuses never change their name. Make that
 a readonly property that is set during construction. Use
 old syntax first.
 
+M2.3 Go to the new syntax.  Point out that the compiler
+enforces correct behavior. With the new syntax, the Name
+cannot be set in any method *except* the constructor. 
+Under the old method, well, you can put things anywhere.
+
+Now, let's serialize a bunch of evil.  
+
+M2.4 Let's serialize Evil to and from JSON. Start with a 
+ToJSON method. The old way is just nasty, so let's not 
+even write that one. Just write the new one. Point out 
+that we've been able to use this kind of syntax with 
+lists and other ordered collections, but not with
+associative containers.
+
+.. Talk about the new NuGet interface. 
+
+
 
 
 
