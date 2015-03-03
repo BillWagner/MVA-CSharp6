@@ -185,7 +185,30 @@ static using:  when (IsAttached) isn't very meaningful.
 M4.7: Add an async log errors method. Put it in the catch
 clauses, and let that be the work getting done now.
 
+==========================================================
+Module 6:
 
+The demo script has two main sections:
+
+1. Let's review the EvilUtilities library and discuss the 
+coding practices. Let's look at the features and discuss
+uses with possible plans for developers:
+a. Should I replace old habits for an entire file on 
+every checkin? 
+b. Should I replace old habits for any code I'm actively 
+modifying?
+c. Should I adopt the new habits, but leave old code 
+untouched?
+d. Is this an example where I bent the new feature to a point
+where the old version is likely more readable?
+
+This is also a great time to answer any live questions that we 
+haven't addressed yet.
+
+The second section will load Dustin's CSharpEssentials project
+(https://github.com/DustinCampbell/CSharpEssentials) and
+show how the Roslyn APIs can make it easier to automate the process
+of adopting new practices.
 
 
 
