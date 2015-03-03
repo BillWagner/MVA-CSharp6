@@ -170,6 +170,14 @@ M4.1: Try to create a nameless evil genius. Program crashes.
 M4.2: (Note that it wasn't labeled in the commit message)
 Catch the ArgumentNullException.
 
+M4.3: comment out and show the errors.
+
+M4.4: show a simple example that catches when the Param
+name is 'name'. Discuss as an example. Better real world
+examples would be HttpException.GetHttpCode().
+
+M4.5: Log exception.
+
 
 
 

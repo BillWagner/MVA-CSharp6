@@ -31,13 +31,26 @@ namespace EvilGeniusUtilities
             }
 
             try {
-                // var nameless = new EvilGenius(default(string));
+                //var nameless = new EvilGenius(default(string));
 
                 var empty = new EvilGenius("     ");
-            } catch (ArgumentNullException n)
+            } catch (Exception e) when (logException(e))
+            {
+
+            } catch (ArgumentNullException n) 
             {
                 WriteLine("Dude, can't have nameless evil genius");
             }
         }
+        public static bool logException(Exception e)
+        {
+            var oldColor = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Red;
+            WriteLine("Error: {0}", e);
+            Console.ForegroundColor = oldColor;
+            return false;
+        }
+
     }
+
 }
