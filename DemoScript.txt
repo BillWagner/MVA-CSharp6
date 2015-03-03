@@ -150,6 +150,24 @@ elements
 
 
 ===========================================================
+Module 4:  Exception Filters and await in finally
+
+Intro: In the last module, we added a check for null in the
+EvilGenius constructor. As our evil empire grows, we're 
+going to run into production style problems: we'll encounter
+problems we haven't seen in the lab.
+
+We want to treat every problem we observe in the field as 
+an opportunity to improve the codebase. When errors occur,
+add code that helps us debug. Add that code in a way that
+we can leave it for the next developer, without impacting
+regular performance.
+
+So, let's look at what might happen.
+
+M4.1: Try to create a nameless evil genius. Program crashes.
+
+
 
 
 

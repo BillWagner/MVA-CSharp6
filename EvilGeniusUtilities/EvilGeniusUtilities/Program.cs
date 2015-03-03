@@ -29,6 +29,10 @@ namespace EvilGeniusUtilities
             {
                 WriteLine(e);
             }
+
+            var nameless = new EvilGenius(default(string));
+
+            var empty = new EvilGenius("     ");
         }
     }
 }

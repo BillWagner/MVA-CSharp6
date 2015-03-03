@@ -18,6 +18,8 @@ namespace EvilGeniusUtilities
         {
             if (name == null)
                 throw new ArgumentNullException(nameof(name), "The Evil Genius must have a name");
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentException(nameof(name), "The Evil Genius must have a non-blank name");
             Name = name;
         }
 
