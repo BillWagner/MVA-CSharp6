@@ -182,7 +182,8 @@ M4.6: Show how to break only when the debugger is
 present. Point out that this is not a good case for 
 static using:  when (IsAttached) isn't very meaningful.
 
-
+M4.7: Add an async log errors method. Put it in the catch
+clauses, and let that be the work getting done now.
 
 
 

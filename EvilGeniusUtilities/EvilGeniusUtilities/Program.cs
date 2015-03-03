@@ -32,21 +32,33 @@ namespace EvilGeniusUtilities
                 WriteLine(e);
             }
 
-            try {
+            // Yes, this is evil, but it's in a console app so 
+            // I can't await:
+            AsyncEvilCreation();
+        }
+
+        private static async Task AsyncEvilCreation()
+        {
+            try
+            {
                 //var nameless = new EvilGenius(default(string));
 
                 var empty = new EvilGenius("     ");
-            } catch (Exception e) when (logException(e))
+            }
+            catch (Exception e) when (logException(e))
             {
 
-            } catch (ArgumentNullException n) 
+            }
+            catch (ArgumentNullException n)
             {
-                WriteLine("Dude, can't have nameless evil genius");
-            } catch (ArgumentException e3) when (!Debugger.IsAttached)
+                await LogErrorToFileAsync("Dude, can't have nameless evil genius", n);
+            }
+            catch (ArgumentException e3) when (!Debugger.IsAttached)
             {
-                WriteLine("Evil names cannot be blank");
+                await LogErrorToFileAsync("Evil names cannot be blank", e3);
             }
         }
+
         public static bool logException(Exception e)
         {
             var oldColor = Console.ForegroundColor;
