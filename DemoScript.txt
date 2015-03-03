@@ -143,19 +143,11 @@ M 3.9: use nameof
 M 3.10: Re-implement the ToString() method using
 string interpolation.
 
+M 3.11: EvilHistory, part 1. Doesn't handle empty sequences.
 
-. write a method to scold the minion. Track how many
-times its been called? 
+M 3.12: Fix EvilHistory to work when there are no previous
+elements
 
-I don't have great examples for this in this sample,
-but play with it and show how expressions, computations
-and more can go inside the {}. Consider a numeric calculation
-(19 + 23 => 42).  Make forward references that we can 
-use this in code that will be written in the next module.
-
-. If this module is short on time, create an ASP.NET vNext 
-app and use string interpolation in the Razor view. That is 
-wicked cool.
 
 ===========================================================
 

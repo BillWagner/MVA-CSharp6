@@ -37,7 +37,10 @@ namespace EvilGeniusUtilities
         }
         public string EvilHistory()
         {
-            return $"{Name} has had {previousHenchmen.Count} henchman: {previousHenchmen.Aggregate((memo, current) => $"{memo}, {current}")}";
+            if (!previousHenchmen.Any())
+                return $"{Name} has had no previous henchman.";
+            else
+                return $"{Name} has had {previousHenchmen.Count} previous henchman: {previousHenchmen.Aggregate((memo, current) => $"{memo}, {current}")}";
         }
 
         public static JArray ToJson(IEnumerable<EvilGenius> evilness)

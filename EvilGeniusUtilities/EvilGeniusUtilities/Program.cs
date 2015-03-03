@@ -17,14 +17,17 @@ namespace EvilGeniusUtilities
             DrEvil.ReplaceHenchman(new Henchman { Name = "Scott Evil" });
             WriteLine(DrEvil);
 
+            DrEvil.ReplaceHenchman(new Henchman { Name = "Mini Me" });
+            WriteLine(DrEvil.EvilHistory());
+
             var TheMaster = new EvilGenius("The Master");
             var tokens = EvilGenius.ToJson(new[] { DrEvil, TheMaster });
 
             var evil = EvilGenius.FromJson(tokens);
+
             foreach (var e in evil)
             {
                 WriteLine(e);
-                WriteLine(e.EvilHistory());
             }
         }
     }
