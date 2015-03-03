@@ -140,9 +140,24 @@ threadsafe.
 
 M 3.9: use nameof
 
+M 3.10: Re-implement the ToString() method using
+string interpolation.
 
-.. Do some string formatting!
 
+. write a method to scold the minion. Track how many
+times its been called? 
+
+I don't have great examples for this in this sample,
+but play with it and show how expressions, computations
+and more can go inside the {}. Consider a numeric calculation
+(19 + 23 => 42).  Make forward references that we can 
+use this in code that will be written in the next module.
+
+. If this module is short on time, create an ASP.NET vNext 
+app and use string interpolation in the Razor view. That is 
+wicked cool.
+
+===========================================================
 
 
 

@@ -10,6 +10,8 @@ namespace EvilGeniusUtilities
 {
     public class EvilGenius
     {
+        private List<string> previousHenchmen = new List<string>();
+
         public string Name { get; }
 
         public EvilGenius(string name)
@@ -24,12 +26,18 @@ namespace EvilGeniusUtilities
 
         public string CatchPhrase { get; set; }
 
-        public override string ToString() => $"{Name}, {Assistant?.Name}";
+        public override string ToString() => $"{Name}, {minion?.Name}";
 
         public void ReplaceHenchman(Henchman newHenchman)
         {
             var oldMinion = Interlocked.Exchange(ref minion, newHenchman);
+            if (oldMinion != null)
+                previousHenchmen.Add(oldMinion.Name);
             (oldMinion as IDisposable)?.Dispose();
+        }
+        public string EvilHistory()
+        {
+            return $"{Name} has had {previousHenchmen.Count} henchman: {previousHenchmen.Aggregate((memo, current) => $"{memo}, {current}")}";
         }
 
         public static JArray ToJson(IEnumerable<EvilGenius> evilness)

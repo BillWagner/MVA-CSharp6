@@ -22,7 +22,10 @@ namespace EvilGeniusUtilities
 
             var evil = EvilGenius.FromJson(tokens);
             foreach (var e in evil)
+            {
                 WriteLine(e);
+                WriteLine(e.EvilHistory());
+            }
         }
     }
 }
