@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace EvilGeniusUtilities
 {
@@ -40,6 +41,9 @@ namespace EvilGeniusUtilities
             } catch (ArgumentNullException n) 
             {
                 WriteLine("Dude, can't have nameless evil genius");
+            } catch (ArgumentException e3) when (!Debugger.IsAttached)
+            {
+                WriteLine("Evil names cannot be blank");
             }
         }
         public static bool logException(Exception e)

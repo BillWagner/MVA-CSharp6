@@ -178,6 +178,9 @@ examples would be HttpException.GetHttpCode().
 
 M4.5: Log exception.
 
+M4.6: Show how to break only when the debugger is
+present.
+
 
 
 
