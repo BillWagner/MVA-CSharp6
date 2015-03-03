@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.IO;
 
 namespace EvilGeniusUtilities
 {
@@ -55,6 +56,13 @@ namespace EvilGeniusUtilities
             return false;
         }
 
+        public static async Task LogErrorToFileAsync(string msg, Exception e)
+        {
+            using (var file = File.AppendText("errors.log"))
+            {
+                await file.WriteAsync($"{msg}: Exception: {e}");
+            }
+        }
     }
 
 }
