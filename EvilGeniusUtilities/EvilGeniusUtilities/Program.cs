@@ -30,9 +30,14 @@ namespace EvilGeniusUtilities
                 WriteLine(e);
             }
 
-            var nameless = new EvilGenius(default(string));
+            try {
+                var nameless = new EvilGenius(default(string));
 
-            var empty = new EvilGenius("     ");
+                var empty = new EvilGenius("     ");
+            } catch (ArgumentNullException n)
+            {
+                WriteLine("Dude, can't have nameless evil genius");
+            }
         }
     }
 }
