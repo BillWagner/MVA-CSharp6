@@ -31,7 +31,7 @@ namespace EvilGeniusUtilities
             }
 
             try {
-                var nameless = new EvilGenius(default(string));
+                // var nameless = new EvilGenius(default(string));
 
                 var empty = new EvilGenius("     ");
             } catch (ArgumentNullException n)
