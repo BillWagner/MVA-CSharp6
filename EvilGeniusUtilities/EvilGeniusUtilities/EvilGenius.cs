@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -21,6 +22,21 @@ namespace EvilGeniusUtilities
             if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentException(nameof(name), "The Evil Genius must have a non-blank name");
             Name = name;
+        }
+
+        public string EvilPoints()
+        {
+            double rebelBase = 19;
+            double rebelAlliance = 23;
+            return ToGerman($"{rebelAlliance} / {rebelBase} is {rebelAlliance / rebelBase}");
+        }
+
+        private string ToGerman(FormattableString src)
+        {
+            return string.Format(
+                CultureInfo.CreateSpecificCulture("de-de"),
+                src.Format,
+                src.GetArguments());
         }
 
         public Henchman Assistant => minion;
